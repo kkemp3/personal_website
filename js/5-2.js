@@ -18,7 +18,7 @@
 window.onload = function () {
     // student puts their code here
     /** @type {HTMLCanvasElement} */
-    let canvas = (/** @type {HTMLCanvasElement} */ document.getElementById("box2canvas"));
+    let canvas = (/** @type {HTMLCanvasElement} */ document.getElementById("canvas1"));
     let context = canvas.getContext('2d');
 
     let fworks = [];

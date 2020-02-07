@@ -1,4 +1,4 @@
-rk Blue: #252839
+Dark Blue: #252839
 Grey Blue: #677077
 Light Grey: #b5b5b7
 Yellow/Gold: #f2b632
@@ -65,6 +65,10 @@ img.profilepic{
   width: 100%;
 }
 
+canvas {
+  border: 1px solid black;
+}
+
 /* vertical-centered text */
 .text-vcenter {
   display: table-cell;
@@ -101,6 +105,10 @@ img.profilepic{
 	width: 100%;
 	background: #999999;
 }
+#js-box {
+  position: relative;
+  
+}
 #courses {
 	background: #ccffff;
 	display: table;
@@ -110,6 +118,10 @@ img.profilepic{
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+}
+#projects {
+  position: relative;
+  width: 100%;
 }
 
 #courses #container {
