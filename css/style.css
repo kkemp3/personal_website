@@ -1,0 +1,136 @@
+rk Blue: #252839
+Grey Blue: #677077
+Light Grey: #b5b5b7
+Yellow/Gold: #f2b632
+Whiteish: #e6e9f0
+/* general styles */
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+@media(max-width:767px){
+  
+}
+@media(min-width:768px){
+  
+}
+@media(min-width:992px){
+  
+}
+@media(min-width:1200px){
+  
+}
+
+nav.navbar{
+  background-color: #252839;
+  border-bottom: 1px solid #b5b5b7;
+  color: #e6e9f0;
+}
+
+.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand, .navbar-default .navbar-nav>li>a{
+  color: #e6e9f0;
+}
+
+.navbar-default .navbar-nav>li>a:hover{
+  color: #ccffff;
+}
+
+
+img.profilepic{
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 100%;
+  margin-bottom: 50px;
+  width: 300px;
+  height:300px;
+}
+
+.parallax-bg{
+  display: block;
+  background-color:rgba(255,255,255,0.75);
+  margin:auto;
+  padding:1em;
+  border-radius:20px;
+  border: 2px solid #677077;
+}
+
+
+
+/* padded section */
+.pad-section {
+  padding: 100px 0;
+}
+.pad-section img {
+  width: 100%;
+}
+
+/* vertical-centered text */
+.text-vcenter {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+.text-vcenter h1 {
+  font-size: 4.5em;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+.text-vleft h1 {
+	font-size: 4.5em;
+	font-weight: 700;
+	margin:-200;
+	padding:20;
+}
+
+/* additional sections */
+#home {
+  background: #ccffff; 
+  display: table;
+  height: 100%;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#about {
+	position: relative;
+	width: 100%;
+	background: #999999;
+}
+#courses {
+	background: #ccffff;
+	display: table;
+	width: 100%;
+	position: relative;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#courses #container {
+	position: relative;
+	left:0;
+}
+
+span.tag{
+  padding:4px;
+  margin-left:3px;
+  margin-right:3px;
+  line-height: 2em;
+}
+div.tags{
+  margin-top: 10px;
+}
+/* Color Pallet
+Dark Blue: #252839
+Grey Blue: #677077
+Light Grey: #b5b5b7
+Yellow/Gold: #f2b632
+Whiteish: #e6e9f0
+/* general styles */
+
