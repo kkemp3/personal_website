@@ -64,7 +64,10 @@ img.profilepic{
 .pad-section img {
   width: 100%;
 }
-
+p.proj_text {
+  vertical-align: middle;
+  text-align: center;
+}
 canvas {
   border: 1px solid black;
 }
@@ -119,7 +122,8 @@ canvas {
 	-o-background-size: cover;
 	background-size: cover;
 }
-#projects {
+.project {
+  table-layout: auto;
   position: relative;
   width: 100%;
 }
