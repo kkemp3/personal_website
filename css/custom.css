@@ -1,0 +1,12 @@
+.project, canvas {
+    align-content: center;
+}
+.project {
+    align-content: center;
+    -ms-grid-row-align: center;
+}
+
+.project, p {
+    align-content: center;
+
+}
