@@ -86,18 +86,17 @@ window.onload = function () {
             }
             let yDir = 0;
             for (let j = 0; j < 10; j++) {
-                expls.push({ "x": x, "y": y, "vx": xDir, "vy": yDir, "color": color, "size": 3 });
+                expls.push({ "x": x, "y": y, "vx": xDir, "vy": yDir, "color": color, "size": 3, shape: "none", angle: 0 });
                 yDir = yDir + (0.1 * xDir);
                 xDir = xDir / 1.1;
             }
         }
     }
+
     function makeCircleWork(x ,y, color) {
         for (let i = 0; i < 36; i++) {
-            context.save();
-            context.rotate((Math.PI/180) * i * 10);
-            expls.push({"x": x, "y": y, "vx": 1, "vy": 1, "color": color, "size": 4});
-            context.restore();
+            let ang = (Math.PI/180) * i * 10;
+            expls.push({"x": x, "y": y, "vx": 1, "vy": 1, "color": color, "size": 4, shape: "circle", angle: ang});
         }
     }
 
@@ -121,14 +120,14 @@ window.onload = function () {
                     work.vy = 0;
                     let chooseShape = Math.random() * (10 - 0) + 0;
                     if (chooseShape > 3.5 && chooseShape < 6.0) {
-                        makeShapedExpl(work.dx, work.dy, work.color);
+                        makeCircleWork(work.dx, work.dy, work.color);
                     } else {
                         // 10 - 20 projectiles for each firework
                         let numExplosions = Math.random() * (20 - 10) + 10;
                         for (let i = 0; i < numExplosions; i++) {
                             let vx = (Math.random() - 0.5) * 3;
                             let vy = (Math.random() - 0.5) * 3;
-                            expls.push({ "x": work.dx, "y": work.dy, "vx": vx, "vy": vy, "color": work.color, "size": 3 });
+                            expls.push({ "x": work.dx, "y": work.dy, "vx": vx, "vy": vy, "color": work.color, "size": 3, shape: "rand", angle: 0 });
                         }
                     }
 
@@ -137,8 +136,19 @@ window.onload = function () {
         });
         // move explosions
         expls.forEach(function (ex) {
-            ex.x -= ex.vx;
-            ex.y -= ex.vy;
+            if (ex.shape === "circle") {
+                context.save();
+                context.translate(ex.x, ex.y);
+                context.rotate(ex.angle);
+                ex.x -= ex.vx;
+                ex.y -= ex.vy;
+                context.translate(-ex.x, -ex.y);
+                context.restore();
+            } else {
+                ex.x -= ex.vx;
+                ex.y -= ex.vy;
+            }
+
         });
         // filter explosions off the screen
         expls = expls.filter(dot => ((dot.y > 0) && (dot.x > 0) && (dot.x < canvas.width) && (dot.y < canvas.height))
