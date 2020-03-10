@@ -9,6 +9,10 @@ html, body {
   width: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @media(max-width:767px){
   
 }
@@ -40,10 +44,12 @@ nav.navbar{
 img.profilepic{
   margin-left: auto;
   margin-right: auto;
+  margin-top: auto;
+  padding-top: 40px;
   border-radius: 100%;
-  margin-bottom: 50px;
-  width: 300px;
-  height:300px;
+  margin-bottom: 20px;
+  width: 400px;
+  height:400px;
 }
 
 .parallax-bg{
@@ -141,6 +147,30 @@ span.tag{
 }
 div.tags{
   margin-top: 10px;
+}
+
+canvas {
+  display: inline;
+  margin: auto;
+}
+div.project {
+  display: inline;
+  margin: auto;
+}
+
+#fadeout {
+  padding-top: 25px;
+  animation: fade 4s ease forwards;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
 }
 /* Color Pallet
 Dark Blue: #252839
